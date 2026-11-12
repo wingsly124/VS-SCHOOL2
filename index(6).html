@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vs School · SMK MERBAU</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<!-- Splash -->
+<div class="screen active" id="scr-splash">
+  <div class="splash-orbs"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+  <div class="splash-inner">
+    <span class="vs-mark lg" style="margin:0 auto;animation:logoFloat 3.5s ease-in-out infinite"></span>
+    <h1 class="splash-title">Vs School</h1>
+    <div class="splash-sub">VIGILANCE &amp; SAFETY</div>
+    <div class="splash-slogan" id="splashSlogan">Speak up. You are not alone</div>
+    <div class="splash-school">SMK MERBAU</div>
+    <div class="splash-progress"><i id="splashBar"></i></div>
+    <div class="splash-studio">WG STUDIO · © 2026 · v1.19.3</div>
+  </div>
+</div>
+
+<!-- Auth -->
+<div class="screen" id="scr-auth">
+  <div class="auth-lang" id="authLang"></div>
+  <div class="auth-wrap">
+    <div class="auth-brand">
+      <span class="vs-mark md"></span>
+      <h1>Vs School</h1>
+      <div class="b-sub">VIGILANCE &amp; SAFETY</div>
+      <div class="b-cn" id="brandSlogan">Speak up. You are not alone</div>
+      <ul id="brandList"></ul>
+    </div>
+    <div class="auth-form">
+      <div class="auth-card">
+        <div class="auth-tabs" id="authTabs"></div>
+        <div id="authBody"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Language picker -->
+<div class="screen" id="scr-lang">
+  <div class="lang-pick-wrap">
+    <div class="lang-pick-box">
+      <div class="globe">🌐</div>
+      <h1>Choose your language</h1>
+      <p class="sub">选择你的语言 · Pilih bahasa anda</p>
+      <div class="opts">
+        <button class="btn btn-primary" data-pick-lang="en">🇬🇧 English</button>
+        <button class="btn btn-ghost" data-pick-lang="zh">🇨🇳 华文</button>
+        <button class="btn btn-ghost" data-pick-lang="ms">🇲🇾 Bahasa Melayu</button>
+      </div>
+      <p class="note">You can change this anytime in Settings.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Main App -->
+<div class="screen" id="scr-app">
+  <header class="appbar">
+    <div class="appbar-left">
+      <span class="vs-mark sm" style="width:34px;height:28px"></span>
+      <div>
+        <div class="app-name">Vs School</div>
+        <div class="app-school">SMK MERBAU</div>
+      </div>
+    </div>
+    <div class="appbar-right">
+      <button class="icon-btn" id="btnNotif" title="Notifications">🔔<span class="dot-badge" id="notifBadge" style="display:none">0</span></button>
+      <button class="icon-btn" id="btnInbox" title="Community">💬<span class="dot-badge" id="inboxBadge" style="display:none">0</span></button>
+      <div class="user-chip" id="userChip">
+        <div class="avatar-mini" id="chipAvatar">?</div>
+        <span class="nm" id="chipName"></span>
+        <span class="rl" id="chipRole"></span>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <aside class="appnav" id="appnav"></aside>
+    <main class="appmain" id="appmain"></main>
+  </div>
+</div>
+
+<!-- Modal & SOS -->
+<div class="modal" id="modal"><div class="modal-box" id="modalBox"></div></div>
+<div class="sos-alert-overlay" id="sosAlertOverlay"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
